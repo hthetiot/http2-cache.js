@@ -8,7 +8,9 @@
     "pretest": "npm run lint",
     "test": "mocha",
     "build": "npm run test",
-    "postinstall": "node postinstall.js"
+    "postinstall": "node postinstall.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,8 @@
     "http2": "https://github.com/dpwspoon/node-http2#http2ws",
     "websocket-stream": "3.3.3",
     "collections": "~5.0.x",
-    "bluebird": "~3.4.x"
+    "bluebird": "~3.4.x",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "npm-k3po": "https://github.com/dpwspoon/npm-k3po#develop",
@@ -46,5 +49,6 @@
     "sinon": "1.17.7",
     "chai": "3.5.0",
     "mocha": "3.2.0"
-  }
+  },
+  "snyk": true
 }
